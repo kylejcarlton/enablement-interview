@@ -1,7 +1,7 @@
 #!/bin/bash
 ENVPATH=/root/.bash_profile
 CONFIGPATH=config.hcl
-USERNAME="$1"
+GHUSERNAME="$1"
 
 # Check if the script is being run with superuser privileges
 if [[ $(id -u) != 0 ]]; then
@@ -9,16 +9,17 @@ if [[ $(id -u) != 0 ]]; then
   exit 1
 fi
 
-if [[ "$USERNAME" = "" ]]
+# Check if argument was passed to script
+if [[ "$GHUSERNAME" = "" ]]
   then
     echo "Exiting. 1st argument must be github username."
     exit 1
 fi
 
-#1 - Set an environment variable with your github username in $ENVPATH
-echo "GITHUBUSER=$USERNAME" >> $ENVPATH
+# Set an environment variable with your github username in $ENVPATH
+echo "GITHUBUSER=$GHUSERNAME" >> $ENVPATH
 
-#2 - Write the following code to a file $CONFIGPATH
+# Write the following code to file $CONFIGPATH
 #cluster_addr  = "https://<HOSTNAME>:8201"
 #api_addr      = "https://<HOSTNAME>:8200"
 #disable_mlock = true
@@ -28,5 +29,5 @@ api_addr      = "https://<HOSTNAME>:8200"
 disable_mlock = true
 EOL
 
-# Replace <HOSTNAME> value vault-server.hashicorp.com in $CONFIGPATH
+# Replace <HOSTNAME> value with vault-server.hashicorp.com in $CONFIGPATH
 sed -i 's/<HOSTNAME>/vault-server.hashicorp.com/g' $CONFIGPATH
