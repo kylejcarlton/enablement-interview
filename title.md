@@ -8,5 +8,5 @@ count: false
 ![Vault Logo](./assets/images/logo_vault_small.png)
 
 ???
-HashiCorp Packer and Terraform are two seperate tools for infrastructure provisioning and management. When integrated together they can streamline the process of creating machine images and deploying infrastructure across all major cloud providers (AWS, Azure, GCP), in locally hosted resource like VMWare or Docker and more. Adding Vault can increase ease of implementing and managing credentials securely throughout the process.
+HashiCorp Packer and Terraform are two seperate tools for infrastructure provisioning and management. When integrated together they can streamline the process of creating machine images and deploying infrastructure across all major cloud providers (AWS, Azure, GCP), in locally hosted resources like VMWare or Docker and more. Adding Vault can increase ease of implementing and managing credentials securely throughout the process.
 ---
