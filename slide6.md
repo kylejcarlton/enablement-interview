@@ -7,9 +7,11 @@ name: slide6
 # Example Integration on AWS 
 
 ```hcl
+...
 resource "aws_instance" "packer" {
   ami           = "ami-059**************"
 }
+...
 ```
 
 
@@ -17,6 +19,6 @@ resource "aws_instance" "packer" {
 
 ???
 
-Replace the AMI ID in the terraform.tf file with the one created by Packer. 
+Replace the AMI ID in the file packer.terraform.tf with the one created by Packer. 
 
 ---

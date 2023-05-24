@@ -10,6 +10,9 @@ name: slide7
 $ terraform init;
 terraform plan;
 terraform apply;
+...
+aws_instance.packer: Creating...
+aws_instance.packer: Creation complete after 53s [id=i-*****]
 ```
 
 

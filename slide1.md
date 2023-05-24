@@ -6,24 +6,30 @@ name: slide1
 
 # Main Benefits
 
-- Increased Efficiency With Faster Infrastructure Provisioning
+- Increase efficiency with faster infrastructure provisioning
 ???
 Faster Infrastructure Provisioning: Terraform can launch instances or resources faster using pre-built machine images from Packer.
 
 --
 count: false
-- Improved Repeatability Through Infrastructure Reusability and Image Versioning.
+- Improve repeatability through infrastructure reusability and image versioning
 ???
-Image Versioning: Packer can generate new versions of machine images automatically, and Terraform can manage their lifecycle.
-
 Infrastructure Reusability: Packer and Terraform configurations can be modular and reusable. You can create a library of machine images with Packer, and Terraform can reference these images across multiple infrastructure deployments. This approach promotes consistency and reduces duplication of effort.
+
+Image Versioning: Packer can generate new versions of machine images automatically, and Terraform can manage their lifecycle.
 --
 count: false
-- Reduced Risk From Human Error
+- Strengthen security posture and keep operations streamlined
+???
+By leveraging Vault, organizations can strengthen their security posture, streamline operations, and protect sensitive data effectively.
+--
+count: false
+- Reduce risk from human error
 ???
 Immutable Infrastructure: Create consistent and reproducible machine images with Packer that Terraform can provision and manage.
 --
 count: false
 - ...
-
+???
+And more...
 ---

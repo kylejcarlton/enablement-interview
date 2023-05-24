@@ -8,18 +8,18 @@ packer {
 }
 
 local "access_key" {
-    expression = vault("/secret/data/aws/access_credentials", "access_key")
-    sensitive  = true
+  expression = vault("/secret/data/aws/access_credentials", "access_key")
+  sensitive  = true
 }
 
 local "secret_key" {
-    expression = vault("/secret/data/aws/access_credentials", "secret_key")
-    sensitive  = true
+  expression = vault("/secret/data/aws/access_credentials", "secret_key")
+  sensitive  = true
 }
 
 source "amazon-ebs" "ubuntu" {
-  access_key = local.access_key
-  secret_key = local.secret_key
+  access_key    = local.access_key
+  secret_key    = local.secret_key
   ami_name      = "packer-terraform-int-aws"
   instance_type = "t2.micro"
   region        = "us-east-2"
@@ -40,7 +40,7 @@ build {
   sources = [
     "source.amazon-ebs.ubuntu"
   ]
-    provisioner "shell" {
+  provisioner "shell" {
     inline = [
       "echo Updating OS and Installing Nginx",
       "sleep 30",
