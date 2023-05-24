@@ -23,7 +23,10 @@ vault --version;
 
 ???
 
-The working environment for this exercise will be Ubuntu 22.04.2 LTS (https://releases.ubuntu.com/22.04.2/ubuntu-22.04.2-live-server-amd64.iso) and should include the files available @ https://github.com/kylejcarlton/enablement-interview.
+The working environment for this exercise will be Ubuntu 22.04.2 LTS (https://releases.ubuntu.com/22.04.2/ubuntu-22.04.2-live-server-amd64.iso) and should include the enablement-interview folder @ https://github.com/kylejcarlton/enablement-interview 
+
+$ git clone -b wip https://github.com/kylejcarlton/enablement-interview.git.;
+cd enablement-interview;
 
 First step is adding the gpg key and hashicorp repository, then installing Packer, Terraform and Vault.
 

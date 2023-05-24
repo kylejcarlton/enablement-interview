@@ -14,9 +14,7 @@ Faster Infrastructure Provisioning: Terraform can launch instances or resources 
 count: false
 - Improve repeatability through infrastructure reusability and image versioning
 ???
-Infrastructure Reusability: Packer and Terraform configurations can be modular and reusable. You can create a library of machine images with Packer, and Terraform can reference these images across multiple infrastructure deployments. This approach promotes consistency and reduces duplication of effort.
-
-Image Versioning: Packer can generate new versions of machine images automatically, and Terraform can manage their lifecycle.
+Infrastructure Reusability and Image Versioning: Packer and Terraform configurations can be modular and reusable. You can create a library of machine images with Packer that it can update automatically. Terraform can reference these images and manage their lifecycles across multiple infrastructure deployments. This approach promotes consistency and reduces duplication of effort.
 --
 count: false
 - Strengthen security posture and keep operations streamlined
